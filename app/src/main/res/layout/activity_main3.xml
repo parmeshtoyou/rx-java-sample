@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
+
+
+    <Button
+        android:id="@+id/startThread"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        app:layout_constraintBottom_toTopOf="@+id/stopThread"
+        app:layout_constraintEnd_toEndOf="@+id/stopThread"
+        app:layout_constraintStart_toStartOf="@+id/stopThread"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stopThread"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:text="Stop"
+        app:layout_constraintBottom_toTopOf="@+id/startTaskA"
+        app:layout_constraintEnd_toEndOf="@+id/startTaskA"
+        app:layout_constraintStart_toStartOf="@+id/startTaskA"
+        app:layout_constraintTop_toBottomOf="@+id/startThread" />
+
+    <Button
+        android:id="@+id/startTaskA"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:text="Start Task A"
+        app:layout_constraintBottom_toTopOf="@+id/startTaskB"
+        app:layout_constraintEnd_toEndOf="@+id/startTaskB"
+        app:layout_constraintStart_toStartOf="@+id/startTaskB"
+        app:layout_constraintTop_toBottomOf="@+id/stopThread" />
+
+    <Button
+        android:id="@+id/startTaskB"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="Start Task B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/startTaskA"
+        app:layout_constraintTop_toBottomOf="@+id/startTaskA" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
